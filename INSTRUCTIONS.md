@@ -3,6 +3,7 @@
 Your task is to create a calculator app that demonstrates your understanding of the client/server request/response cycle. To ensure that your app is making sensible use of the request/response cycle:
 * All mathematical logic **must** be implemented on the server.
 * Calculation history data **must** be stored on the server.
+
 * The client-side code **must** be able to:
   * Ask the server for its calculation history, then render it appropriately on the DOM.
   * Obtain "new calculation" data via user input, then send it to the server.
@@ -11,23 +12,32 @@ Your task is to create a calculator app that demonstrates your understanding of 
 
 ## Requirements:
 
+    ### Client-Side
+      * Ask the server for its calculation history, then render it appropriately on the DOM.
+      * Obtain "new calculation" data via user input, then send it to the server.
+
+    ### Server-Side
+      
+
 #### Client-Side:
 
-* Inside the `<section data-testid="resultHistory">` element, display a list of all previous calculations on the page when it loads (using a `GET '/calculations'` request). 
+- [  ] * Inside the `<section data-testid="resultHistory">` element, display a list of all previous calculations on the page when it loads (using a `GET '/calculations'` request). 
   * Update this list when a new calculation is made.
-* Inside the `<section data-testid="recentResult">` element, display the most recent calculation **result**.
+  
+- [  ] * Inside the `<section data-testid="recentResult">` element, display the most recent calculation **result**.
   * Update this when a new calculation is made.
-* Inside `<form data-testid="calculator">`:
-  * Create a user interface where the user can input two values and select a mathematical operator.
-    * Each mathematical operator is represented by a button:
-      * `<button>+</button>`
-  * When the `=` button is clicked, capture the input values and operator, then send this data to `POST '/calculations'`. You'll need to format it like so:
-    * `{ numOne: 25, numTwo: 10, operator: '+' }`
-  * There should be a `'C'` button that will clear the inputs.
+
+- [  ] * Inside `<form data-testid="calculator">`:
+  - [  ] * Create a user interface where the user can input two values and select a mathematical operator.
+  - [  ] * Each mathematical operator is represented by a button:
+        * `<button>+</button>`
+  - [  ] * When the `=` button is clicked, capture the input values and operator, then send this data to `POST '/calculations'`. You'll need to format it like so:
+        * `{ numOne: 25, numTwo: 10, operator: '+' }`
+- [  ] * There should be a `'C'` button that will clear the inputs.
 
 #### Server-Side:
 
-* Create a `GET '/calculations'` route that will send the `calculations` array back to the client. When populated with data, this array needs to be shaped like this:
+- [  ] * Create a `GET '/calculations'` route that will send the `calculations` array back to the client. When populated with data, this array needs to be shaped like this:
   * ```js
       [
         {
@@ -44,7 +54,8 @@ Your task is to create a calculator app that demonstrates your understanding of 
         }
       ]
     ```
-* Create a `POST '/calculations` route that will "do the math" and obtain the correct `result` value. It must be able to handle addition, subtraction, multiplication, and division.
+
+- [  ] * Create a `POST '/calculations` route that will "do the math" and obtain the correct `result` value. It must be able to handle addition, subtraction, multiplication, and division.
   * For example, if the `POST` route receives this data:
     * `{ numOne: 25, numTwo: 10, operator: '+' }`
   * It should "do the math," then push this object into the server-side `calculations` array:
@@ -80,20 +91,20 @@ Your task is to create a calculator app that demonstrates your understanding of 
   * <details>
       <summary>Client-Side Specifications</summary>
 
-      * The calculator `<form>` must have this attribute:
+      - [  ]  * The calculator `<form>` must have this attribute:
         * `data-testid="calculator"`
-      * Your `<input>`s must use this exact placeholder text:
-        * `placeholder="First Number"`
-        * `placeholder="Second Number"`
-      * All `<button>` text content is as specified:
-        * `+` `-` `*` `/` `=` `C`
-      * The most recent calculation result needs to be rendered somewhere inside the `<section>` element that has the `data-testid="recentResult"` attribute. For example, this would be just fine:
+      - [  ]  * Your `<input>`s must use this exact placeholder text:
+          * `placeholder="First Number"`
+          * `placeholder="Second Number"`
+      - [  ] * All `<button>` text content is as specified:
+            * `+` `-` `*` `/` `=` `C`
+      - [  ] * The most recent calculation result needs to be rendered somewhere inside the `<section>` element that has the `data-testid="recentResult"` attribute. For example, this would be just fine:
         * ```html
           <section data-testid="recentResult">
             <h2>525</h2>
           </section>
           ```
-      * The list of calculation history needs to be rendered somewhere inside the `<section>` element that has the `data-testid="resultHistory"` attribute.
+      - [  ] * The list of calculation history needs to be rendered somewhere inside the `<section>` element that has the `data-testid="resultHistory"` attribute.
     
     </details>
 
