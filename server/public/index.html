@@ -2,30 +2,61 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Server-Side Calculator</title>    
+    <title>Server-Side Calculator</title>  
+    <!-- Link AXIOS -->
     <script defer src="scripts/axios.js"></script>
+    <!-- Link Personal JS -->
     <script defer src="scripts/client.js" charset="utf-8"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./styles/styles.css">
   </head>
   <body>
+    <!-- Page Header -->
     <h1>Server-Side Calculator</h1>
+    
+    <!-- Calculator Form -->
+    <div class="calculator">
+      <form data-testid="calculator">
+        <input placeholder="First Number">
+        <div class="mathOperators">
+          <button>+</button>
+          <button>-</button>
+          <button>*</button>
+          <button>/</button>
+        </div>
+        <input placeholder="Second Number">
+        <div class="submitCalculations">
+          <button>=</button>
+          <button>C</button>
+        </div>
+      </form>
+    </div>
 
-    <form data-testid="calculator">
-      <input placeholder="First Number">
-      <button>+</button>
-      <button>-</button>
-      <button>*</button>
-      <button>/</button>
-      <input placeholder="Second Number">
-      <button>=</button>
-      <button>C</button>
-    </form>
-
+    <!-- The most recent calculation result goes here. -->
     <section data-testid="recentResult">
-      <!-- The most recent calculation result goes here. -->
+      <div class="resultsContainer">
+        <h3 class="resultsHeader">Calculation Result</h3>
+      </div>
     </section>
-
+    
+    <!-- The list of all calculation results goes here. -->
     <section data-testid="resultHistory">
-      <!-- The list of calculation results goes here. -->
+      <div class="resultsContainer">
+        <h3 class="resultsHeader">All Calculations History</h3>
+        <table class="resultHistoryTable table">
+          <thead>
+            <th>Number 1</th>
+            <th>Operator</th>
+            <th>Number 2</th>
+            <th>Result</th>
+          </thead>
+        </table>
+      </div>
     </section>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
