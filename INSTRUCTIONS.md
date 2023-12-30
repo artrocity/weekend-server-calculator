@@ -55,7 +55,7 @@ Your task is to create a calculator app that demonstrates your understanding of 
       ]
     ```
 
-- [  ] * Create a `POST '/calculations` route that will "do the math" and obtain the correct `result` value. It must be able to handle addition, subtraction, multiplication, and division.
+- [ X ] * Create a `POST '/calculations` route that will "do the math" and obtain the correct `result` value. It must be able to handle addition, subtraction, multiplication, and division.
   * For example, if the `POST` route receives this data:
     * `{ numOne: 25, numTwo: 10, operator: '+' }`
   * It should "do the math," then push this object into the server-side `calculations` array:
@@ -91,12 +91,12 @@ Your task is to create a calculator app that demonstrates your understanding of 
   * <details>
       <summary>Client-Side Specifications</summary>
 
-      - [  ]  * The calculator `<form>` must have this attribute:
+      - [ X ]  * The calculator `<form>` must have this attribute:
         * `data-testid="calculator"`
-      - [  ]  * Your `<input>`s must use this exact placeholder text:
+      - [ X ]  * Your `<input>`s must use this exact placeholder text:
           * `placeholder="First Number"`
           * `placeholder="Second Number"`
-      - [  ] * All `<button>` text content is as specified:
+      - [ X ] * All `<button>` text content is as specified:
             * `+` `-` `*` `/` `=` `C`
       - [  ] * The most recent calculation result needs to be rendered somewhere inside the `<section>` element that has the `data-testid="recentResult"` attribute. For example, this would be just fine:
         * ```html
