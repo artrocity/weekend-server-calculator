@@ -17,7 +17,7 @@ Your task is to create a calculator app that demonstrates your understanding of 
       * Obtain "new calculation" data via user input, then send it to the server.
 
     ### Server-Side
-      
+
 
 #### Client-Side:
 
@@ -37,7 +37,7 @@ Your task is to create a calculator app that demonstrates your understanding of 
 
 #### Server-Side:
 
-- [  ] * Create a `GET '/calculations'` route that will send the `calculations` array back to the client. When populated with data, this array needs to be shaped like this:
+- [ X ] * Create a `GET '/calculations'` route that will send the `calculations` array back to the client. When populated with data, this array needs to be shaped like this:
   * ```js
       [
         {
