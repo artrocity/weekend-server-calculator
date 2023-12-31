@@ -18,17 +18,17 @@
     
     <!-- Calculator Form -->
     <div class="calculator">
-      <form data-testid="calculator">
-        <input placeholder="First Number">
+      <form id="calculationForm" data-testid="calculator">
+        <input id="firstNumber" placeholder="First Number" required>
         <div class="mathOperators">
-          <button>+</button>
-          <button>-</button>
-          <button>*</button>
-          <button>/</button>
+          <button class="operator" type="button" value="+">+</button>
+          <button class="operator" type="button" value="-">-</button>
+          <button class="operator" type="button" value="*">*</button>
+          <button class="operator" type="button" value="/">/</button>
         </div>
-        <input placeholder="Second Number">
+        <input id="secondNumber" placeholder="Second Number" required>
         <div class="submitCalculations">
-          <button>=</button>
+          <button type="submit">=</button>
           <button>C</button>
         </div>
       </form>
