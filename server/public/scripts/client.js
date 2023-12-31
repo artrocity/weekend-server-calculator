@@ -92,5 +92,9 @@ function submitCalculation(numOne, numTwo, operator) {
         .catch(error => console.error('Error submitting calculation:', error));
 }
 
-// Initialize the calculations
-getCalculations();
+// Function to clear inputs
+function clearInputs() {
+    // Obtain the inputs and clear their values
+    document.getElementById('firstNumber').value = '';
+    document.getElementById('secondNumber').value = '';
+}

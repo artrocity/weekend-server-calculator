@@ -21,19 +21,19 @@ Your task is to create a calculator app that demonstrates your understanding of 
 
 #### Client-Side:
 
-- [  ] * Inside the `<section data-testid="resultHistory">` element, display a list of all previous calculations on the page when it loads (using a `GET '/calculations'` request). 
+- [ X ] * Inside the `<section data-testid="resultHistory">` element, display a list of all previous calculations on the page when it loads (using a `GET '/calculations'` request). 
   * Update this list when a new calculation is made.
   
-- [  ] * Inside the `<section data-testid="recentResult">` element, display the most recent calculation **result**.
+- [ X ] * Inside the `<section data-testid="recentResult">` element, display the most recent calculation **result**.
   * Update this when a new calculation is made.
 
-- [  ] * Inside `<form data-testid="calculator">`:
-  - [  ] * Create a user interface where the user can input two values and select a mathematical operator.
-  - [  ] * Each mathematical operator is represented by a button:
+- [ X ] * Inside `<form data-testid="calculator">`:
+  - [ X ] * Create a user interface where the user can input two values and select a mathematical operator.
+  - [ X ] * Each mathematical operator is represented by a button:
         * `<button>+</button>`
-  - [  ] * When the `=` button is clicked, capture the input values and operator, then send this data to `POST '/calculations'`. You'll need to format it like so:
+  - [ X ] * When the `=` button is clicked, capture the input values and operator, then send this data to `POST '/calculations'`. You'll need to format it like so:
         * `{ numOne: 25, numTwo: 10, operator: '+' }`
-- [  ] * There should be a `'C'` button that will clear the inputs.
+- [ X ] * There should be a `'C'` button that will clear the inputs.
 
 #### Server-Side:
 
@@ -98,13 +98,13 @@ Your task is to create a calculator app that demonstrates your understanding of 
           * `placeholder="Second Number"`
       - [ X ] * All `<button>` text content is as specified:
             * `+` `-` `*` `/` `=` `C`
-      - [  ] * The most recent calculation result needs to be rendered somewhere inside the `<section>` element that has the `data-testid="recentResult"` attribute. For example, this would be just fine:
+      - [ x ] * The most recent calculation result needs to be rendered somewhere inside the `<section>` element that has the `data-testid="recentResult"` attribute. For example, this would be just fine:
         * ```html
           <section data-testid="recentResult">
             <h2>525</h2>
           </section>
           ```
-      - [  ] * The list of calculation history needs to be rendered somewhere inside the `<section>` element that has the `data-testid="resultHistory"` attribute.
+      - [ X ] * The list of calculation history needs to be rendered somewhere inside the `<section>` element that has the `data-testid="resultHistory"` attribute.
     
     </details>
 
