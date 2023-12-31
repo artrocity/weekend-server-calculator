@@ -37,7 +37,6 @@ router.post('/', (req, res) => {
             if (numTwo === 0) {
                 return res.status(400).send('Cannot divide by zero');
             }
-
             result = numOne / numTwo;
             break;
         default:

@@ -13,10 +13,6 @@ app.use(express.static('server/public'));
 // Express Routes
 app.use('/calculations', calculationsRouter);
 
-
-
-
-
 // PLEASE DO NOT MODIFY ANY CODE BELOW THESE BEARS:
 // 🐻  🐻‍❄️  🧸  🐻  🐻‍❄️  🧸  🐻  🐻‍❄️  🧸  🐻  🐻‍❄️  🧸
 
