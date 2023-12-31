@@ -82,3 +82,10 @@ h1, .resultsHeader {
     color: white; 
     border: 1px solid darkgreen;
 }
+
+/* Recent Results */
+.recentResultP {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}

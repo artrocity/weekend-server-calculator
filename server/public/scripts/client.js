@@ -8,6 +8,7 @@ function getCalculations() {
     })
     .then(response => {
         renderCalculations(response.data);
+        renderLastCalculation(response.data);
     })
     .catch(err => {
         console.error("Error Fetching The Calculations Data From The Server: ", err);
@@ -31,6 +32,25 @@ function renderCalculations(calculations) {
                     </tr>`;
         resultTableElement.innerHTML += row;
         });
+}
+
+// Function to render the last calculation
+function renderLastCalculation(calculations) {
+    // Obtain the recent result paragraph element and clear content
+    let pElement = document.querySelector(".recentResultP");
+    pElement.innerText = "";
+
+    // Check if there are any calculations
+    if (calculations.length > 0) {
+        // Get the last calculation from the array
+        let lastCalculation = calculations[calculations.length - 1];
+
+        // Display the last calculation
+        pElement.innerText = `${lastCalculation.result}`;
+    } else {
+        // Display a message if there are no calculations
+        pElement.innerText = "No calculations yet.";
+    }
 }
 
 // Add event listener for the buttons
@@ -71,3 +91,6 @@ function submitCalculation(numOne, numTwo, operator) {
         })
         .catch(error => console.error('Error submitting calculation:', error));
 }
+
+// Initialize the calculations
+getCalculations();
