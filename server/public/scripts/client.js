@@ -15,3 +15,22 @@ function getCalculations() {
     })
 }
 
+// Function to render calculations in the result table body
+function renderCalculations(calculations) {
+    // Obtain the table body and clear contents
+    const resultTableElement = document.querySelector(".resultTableBody");
+    resultTableElement.innerHTML = "";
+
+    // Loop through the calculations and append to the table body
+    calculations.forEach(calc => {
+        const row = `<tr>
+                        <td>${calc.numOne}</td>
+                        <td>${calc.operator}</td>
+                        <td>${calc.numTwo}</td>
+                        <td>${calc.result}</td>
+                    </tr>`;
+        resultTableElement.innerHTML += row;
+        });
+}
+
+// Make an axios post request and submit data to server to be calculated
