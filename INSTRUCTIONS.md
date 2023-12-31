@@ -140,7 +140,7 @@ Your task is to create a calculator app that demonstrates your understanding of 
 
 ## Stretch Goals:
 
-* Only allow the `POST` request to happen if all necessary input is ready.
+* [ X ] - Only allow the `POST` request to happen if all necessary input is ready.
   * *Data integrity is of maximum importance! Sometimes users hit the "go button" without fully inputting the needed fields. Display an alert if they left something empty, and don't send bad or incomplete data to the server.*
 
 * Allow a user to clear the calculation history by clicking on a button. (This should empty out the `calculations` array on the server!) Technically this shouldn't be a `GET` or a `POST`. Look into making a `DELETE` request!
